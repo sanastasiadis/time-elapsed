@@ -44,8 +44,8 @@ export class AppComponent {
     this.currentDate = Date.now();
     let currentYear = new Date(currentDate).getFullYear()
     
-    this.value1 = (currentDate - new Date(currentYear, 0, 1).getTime()) / 1000;
-    this.value2 = (new Date(currentYear, 11, 31, 23, 59, 59, 999).getTime() - currentDate) / 1000;
+    this.value1 = (this.currentDate - new Date(currentYear, 0, 1).getTime()) / 1000;
+    this.value2 = (new Date(currentYear, 11, 31, 23, 59, 59, 999).getTime() - this.currentDate) / 1000;
     this.total = this.value1 + this.value2;
   }
 }
