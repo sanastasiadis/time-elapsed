@@ -9,6 +9,7 @@ import { Observable } from 'rxjs/Rx';
         <tr>
           <td>Elapsed:</td>
           <td style="text-align:right"><font color='green'>{{value1.toFixed(0)}}</font></td>
+          <td>{{currentDate | date}}<td>
         </tr>
       
         <tr>
@@ -27,6 +28,7 @@ import { Observable } from 'rxjs/Rx';
 })
 export class AppComponent {
   title = 'Time passes';
+  currentDate = 0;
   value1 = 0;
   value2 = 0;
   total = 0;
@@ -39,7 +41,7 @@ export class AppComponent {
   }
   
   func() {
-    let currentDate = Date.now();
+    this.currentDate = Date.now();
     let currentYear = new Date(currentDate).getFullYear()
     
     this.value1 = (currentDate - new Date(currentYear, 0, 1).getTime()) / 1000;
