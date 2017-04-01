@@ -9,7 +9,7 @@ import { Observable } from 'rxjs/Rx';
         <tr>
           <td>Elapsed:</td>
           <td style="text-align:right"><font color='green'>{{value1.toFixed(0)}}</font></td>
-          <td>{{currentDate | date}}<td>
+          <td>{{currentDate | date : 'yyyy-MM-dd HH:mm:ss'}}<td>
         </tr>
       
         <tr>
